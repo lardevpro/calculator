@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   standalone: true,
 })
 export class PantallaComponent {
+  mensajeAMostrar:string = '0';
 
 }
