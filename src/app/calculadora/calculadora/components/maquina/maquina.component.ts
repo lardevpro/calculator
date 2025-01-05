@@ -13,13 +13,15 @@ import { CalculadoraService } from '../../../services/calculadora.service';
 })
 
 export class MaquinaComponent implements OnInit {
-  mensajeDePrueba:string = '';
-
+  elMensajeParaPantalla:string = '';
 
   constructor(private servicio: CalculadoraService) { } //Inyección del servicio
 
   ngOnInit(): void {
-  this.mensajeDePrueba =  this.servicio.getEjemplo();
-  
+  this.elMensajeParaPantalla =  this.servicio.getValor();
+  }
+
+  botonPulsado(valor:string){
+    return '12';
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-
+//el servicio se debe hacer demasiado extricto y bien delimitado. Más a la programación orientado objetos.
 @Injectable(
   
   
@@ -12,7 +12,7 @@ export class CalculadoraService {
 
   constructor() { }
 
-  getEjemplo():string {
-    return 'Hola mundo';
+  getValor(): string {
+    return '0';
   }
 }

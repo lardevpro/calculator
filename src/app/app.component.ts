@@ -10,11 +10,5 @@ import { MaquinaComponent } from "./calculadora/calculadora/components/maquina/m
 })
 export class AppComponent {
 
-  //prueba de interpolación (declaración de variables).
-  //mensaje = 'Hola qué tal';
 
-
-  // cambiar(){
-  //   this.mensaje = 'Adios';
-  // }
 }

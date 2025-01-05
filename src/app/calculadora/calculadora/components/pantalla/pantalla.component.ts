@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-pantalla',
@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   standalone: true,
 })
 export class PantallaComponent {
-  mensajeAMostrar:string = '0';
+  @Input() mensajeAMostrar:string = '0'; //
 
 }

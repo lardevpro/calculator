@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-teclado',
@@ -9,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class TecladoComponent {
 
+  @Output('pulsado') emisorDeEventos = new EventEmitter <string> (); //se encarga de emitir eventos(alias pulsado)
+
+  botonPulsado(teclaPulsada:string){
+    this.emisorDeEventos.emit(teclaPulsada); //emite el evento
+  }
 }

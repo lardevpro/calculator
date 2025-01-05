@@ -1,9 +1,28 @@
-<!-- <p>Máquina (delegado para pintar los demás componentes) {{mensajeDePrueba}}</p> -->
-<app-teclado></app-teclado>
-<app-pantalla></app-pantalla>
+<!-- Máquina (delegado para pintar los demás componentes)  -->
+
+<app-teclado (pulsado)="botonPulsado($event)"></app-teclado> <!-- recoge el evento de teclado (una tecla pulsada)-->
+<app-pantalla [mensajeAMostrar] ="elMensajeParaPantalla"></app-pantalla> <!-- el mensaje que muestra pantalla se lo proporciona maquina -->
 
 
 <!-- el componente maquina tiene el mínimo ts para gestionar los demas componentes -->
 <!-- los componentes que muestra el componente maquina  seran teclado y pantalla -->
 <!-- la logica de control se le delegara a los servicios -->
 <!-- se inyecta el servicio en el componente maquina -->
+
+
+<!-- Este es el componente principal por defecto -->
+
+<!-- interpolacion  -->
+
+<!-- de expresiones typescript -->
+<!-- <p>{{mensaje.toLocaleUpperCase()}}</p> -->
+
+<!--  de eventos -->
+<!-- <p>
+    <button (click)="cambiar()">Pulsa aquí</button>
+</p> -->
+
+<!-- de asignacion de atributos -->
+<!-- [atributos] = "" -->
+
+<!-- [(ngModel)] bidireccional "two way binding" -->
