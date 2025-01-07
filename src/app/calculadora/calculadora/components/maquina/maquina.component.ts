@@ -18,10 +18,10 @@ export class MaquinaComponent implements OnInit {
   constructor(private servicio: CalculadoraService) { } //Inyección del servicio
 
   ngOnInit(): void {
-  this.elMensajeParaPantalla =  this.servicio.getValor();
+  this.elMensajeParaPantalla =  this.servicio.getResultado();
   }
 
-  botonPulsado(valor:string){
-    return '12';
+  botonPulsado(valor:number){
+  this.elMensajeParaPantalla =  this.servicio.teclaPulsada(valor);
   }
 }
