@@ -21,7 +21,7 @@ export class MaquinaComponent implements OnInit {
   this.elMensajeParaPantalla =  this.servicio.getResultado();
   }
 
-  botonPulsado(valor:number){
+  botonPulsado(valor:number | string) {
   this.elMensajeParaPantalla =  this.servicio.teclaPulsada(valor);
   }
 }

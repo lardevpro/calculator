@@ -9,9 +9,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class TecladoComponent {
 
-  @Output('pulsado') emisorDeEventos = new EventEmitter <string> (); //se encarga de emitir eventos(alias pulsado)
+  @Output('pulsado') emisorDeEventos = new EventEmitter<number | string>();
 
-  botonPulsado(teclaPulsada:string){
-    this.emisorDeEventos.emit(teclaPulsada); //emite el evento
+  botonPulsado(teclaPulsada: string | number) {
+    const tecla = isNaN(Number(teclaPulsada)) ? teclaPulsada : Number(teclaPulsada);
+    this.emisorDeEventos.emit(tecla);
   }
 }

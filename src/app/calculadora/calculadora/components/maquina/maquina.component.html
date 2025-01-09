@@ -1,6 +1,6 @@
 <!-- Máquina (delegado para pintar los demás componentes)  -->
 
-<app-teclado (pulsado)="botonPulsado(+($event))"></app-teclado> <!-- recoge el evento de teclado (una tecla pulsada)-->
+<app-teclado (pulsado)="botonPulsado($event)"></app-teclado> <!-- recoge el evento de teclado (una tecla pulsada)-->
 <app-pantalla [mensajeAMostrar] ="elMensajeParaPantalla"></app-pantalla> <!-- el mensaje que muestra pantalla se lo proporciona maquina -->
 
 
